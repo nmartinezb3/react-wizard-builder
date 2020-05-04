@@ -2,9 +2,9 @@
 
 > A set of React components for building multi step wizards in a simple manner, fully written in TypeScript.
 
-[![NPM](https://img.shields.io/npm/v/react-wizard.svg)](https://www.npmjs.com/package/react-wizard) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-![Alt Text](example/sample.gif)
+[![NPM](https://img.shields.io/npm/v/react-wizard-builder.svg)](https://www.npmjs.com/package/react-wizard-builder)
+[![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
+![gif](example/sample.gif)
 
 ## Install 💻
 
