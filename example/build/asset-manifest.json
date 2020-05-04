@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-wizard/static/css/main.b926a3cc.chunk.css",
-    "main.js": "/react-wizard/static/js/main.5fcda72b.chunk.js",
-    "main.js.map": "/react-wizard/static/js/main.5fcda72b.chunk.js.map",
-    "runtime-main.js": "/react-wizard/static/js/runtime-main.c27fb2a3.js",
-    "runtime-main.js.map": "/react-wizard/static/js/runtime-main.c27fb2a3.js.map",
-    "static/js/2.eba26924.chunk.js": "/react-wizard/static/js/2.eba26924.chunk.js",
-    "static/js/2.eba26924.chunk.js.map": "/react-wizard/static/js/2.eba26924.chunk.js.map",
-    "index.html": "/react-wizard/index.html",
-    "precache-manifest.5436daae2d1e4b77a88f2034cd81fc3a.js": "/react-wizard/precache-manifest.5436daae2d1e4b77a88f2034cd81fc3a.js",
-    "service-worker.js": "/react-wizard/service-worker.js",
-    "static/css/main.b926a3cc.chunk.css.map": "/react-wizard/static/css/main.b926a3cc.chunk.css.map",
-    "static/js/2.eba26924.chunk.js.LICENSE.txt": "/react-wizard/static/js/2.eba26924.chunk.js.LICENSE.txt"
+    "main.css": "/react-wizard-builder/static/css/main.0ea351b9.chunk.css",
+    "main.js": "/react-wizard-builder/static/js/main.7dc5261d.chunk.js",
+    "main.js.map": "/react-wizard-builder/static/js/main.7dc5261d.chunk.js.map",
+    "runtime-main.js": "/react-wizard-builder/static/js/runtime-main.f4410440.js",
+    "runtime-main.js.map": "/react-wizard-builder/static/js/runtime-main.f4410440.js.map",
+    "static/js/2.b13e2e77.chunk.js": "/react-wizard-builder/static/js/2.b13e2e77.chunk.js",
+    "static/js/2.b13e2e77.chunk.js.map": "/react-wizard-builder/static/js/2.b13e2e77.chunk.js.map",
+    "index.html": "/react-wizard-builder/index.html",
+    "precache-manifest.78fd3804f966a822e4eb038dea83f2a9.js": "/react-wizard-builder/precache-manifest.78fd3804f966a822e4eb038dea83f2a9.js",
+    "service-worker.js": "/react-wizard-builder/service-worker.js",
+    "static/css/main.0ea351b9.chunk.css.map": "/react-wizard-builder/static/css/main.0ea351b9.chunk.css.map",
+    "static/js/2.b13e2e77.chunk.js.LICENSE.txt": "/react-wizard-builder/static/js/2.b13e2e77.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c27fb2a3.js",
-    "static/js/2.eba26924.chunk.js",
-    "static/css/main.b926a3cc.chunk.css",
-    "static/js/main.5fcda72b.chunk.js"
+    "static/js/runtime-main.f4410440.js",
+    "static/js/2.b13e2e77.chunk.js",
+    "static/css/main.0ea351b9.chunk.css",
+    "static/js/main.7dc5261d.chunk.js"
   ]
 }

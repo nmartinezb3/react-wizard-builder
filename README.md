@@ -1,11 +1,10 @@
 # react-wizard-builder
 
-> A set of React components for building multi step wizards in a simple manner
+> A set of React components for building multi step wizards in a simple manner, fully written in TypeScript.
 
 [![NPM](https://img.shields.io/npm/v/react-wizard.svg)](https://www.npmjs.com/package/react-wizard) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ![Alt Text](example/sample.gif)
-
 
 ## Install 💻
 
@@ -24,7 +23,7 @@ yarn add react-wizard-builder
 ## Usage ⚒️
 
 ```tsx
-import Wizard from 'react-wizard-builder'
+import { Wizard } from 'react-wizard-builder'
 
 const App = () => (
   <Wizard
@@ -93,5 +92,5 @@ Check sample code [here](https://github.com/nmartinezb3/react-wizard-builder/tre
 Live preview [here](https://nmartinezb3.github.io/react-wizard-builder/)
 
 ## Author ✍️
-Nicolás Martínez - [nmartinezb3](https://github.com/nmartinezb3)
 
+Nicolás Martínez - [nmartinezb3](https://github.com/nmartinezb3)

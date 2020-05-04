@@ -24,8 +24,20 @@ code {
   margin-top: 14px;
   padding: 17px 20px;
   margin-bottom: 20px;
-
   margin-top: 15px;
   margin-bottom: 15px;
   height: 400px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.09;
+  padding: 0;
+}
+.subtitle {
+  font-size: 14px;
+  line-height: 1.09;
+  padding: 0;
+  padding: 20px 0;
 }

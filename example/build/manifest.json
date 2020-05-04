@@ -1,6 +1,6 @@
 {
-  "short_name": "react-wizard",
-  "name": "react-wizard",
+  "short_name": "react-wizard-builder",
+  "name": "react-wizard-builder",
   "icons": [
     {
       "src": "favicon.ico",
