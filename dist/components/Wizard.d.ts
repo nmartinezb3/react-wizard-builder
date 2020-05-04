@@ -27,10 +27,6 @@ interface IWizardProps {
     previousStepLabel?: string;
     nextStepLabel?: string;
     finishStepLabel?: string;
-    className?: string;
-    footerClassName?: string;
-    statusBarClassName?: string;
-    statusBarProgressClassName?: string;
 }
 export declare function Wizard(props: IWizardProps): JSX.Element;
 export declare namespace Wizard {

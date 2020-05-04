@@ -4,7 +4,5 @@ export declare const StatusBarProgress: import("styled-components").StyledCompon
 export interface StatusBarProps {
     currentStep: number;
     countSteps: number;
-    statusBarClassName?: string;
-    statusBarProgressClassName?: string;
 }
 export declare const StatusBar: (props: StatusBarProps) => JSX.Element;

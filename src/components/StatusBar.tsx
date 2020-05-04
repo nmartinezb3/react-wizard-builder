@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const StatusBarContainer = styled.div`
   margin-bottom: 15px;
   background-color: #efeef5;
+  border-radius: 10px;
 `
 
 export const StatusBarProgress = styled.div<StatusBarProps>`
@@ -11,6 +12,7 @@ export const StatusBarProgress = styled.div<StatusBarProps>`
   background-color: #4ca1ff;
   transition: width 0.2s;
   width: ${(props: StatusBarProps) => (100 / props.countSteps) * (props.currentStep + 1)}%;
+  border-radius: 10px;
 `
 
 export interface StatusBarProps {

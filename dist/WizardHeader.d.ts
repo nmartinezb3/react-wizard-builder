@@ -1,13 +1,8 @@
 /// <reference types="react" />
-import PropTypes from 'prop-types';
-export declare const Text: import("styled-components").StyledComponent<"div", any, any, never>;
+export declare const Text: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const Subtitle: import("styled-components").StyledComponent<"div", any, {}, never>;
 interface IWizardHeaderProps {
     currentStep: number;
 }
-declare const WizardHeader: {
-    ({ currentStep }: IWizardHeaderProps): JSX.Element;
-    propTypes: {
-        currentStep: PropTypes.Requireable<number>;
-    };
-};
+declare const WizardHeader: ({ currentStep }: IWizardHeaderProps) => JSX.Element;
 export default WizardHeader;

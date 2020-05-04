@@ -1,2 +1,1 @@
-export { default as WizardHeader } from './WizardHeader'
-export { default as Wizard } from './Wizard'
+export { WizardProps, Wizard } from './components/Wizard'
