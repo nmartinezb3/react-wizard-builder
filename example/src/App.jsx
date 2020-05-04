@@ -1,5 +1,5 @@
 import React from 'react'
-import { Wizard } from 'react-wizard'
+import { Wizard } from 'react-wizard-builder'
 import Header from './Header'
 
 const App = () => {
@@ -7,10 +7,6 @@ const App = () => {
     <div className='app-container'>
       <div className='white-card'>
         <Wizard
-          className='my-wizard'
-          footerClassName='my-footer'
-          statusBarClassName='my-status-bar'
-          statusBarProgressClassName='my-progress'
           initialStep={0}
           renderHeader={(props) => <Header {...props} />}
           onNextStep={({ currentStep }) => console.log('On next step ' + currentStep)}

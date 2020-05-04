@@ -7,7 +7,7 @@
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",
-    "react-wizard": "link:.."
+    "react-wizard-builder": "link:.."
   },
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
