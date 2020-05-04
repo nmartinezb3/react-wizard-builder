@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-wizard-builder/static/css/main.0fe1c3f2.chunk.css",
-    "main.js": "/react-wizard-builder/static/js/main.5fcda72b.chunk.js",
-    "main.js.map": "/react-wizard-builder/static/js/main.5fcda72b.chunk.js.map",
+    "main.js": "/react-wizard-builder/static/js/main.03b6c0d8.chunk.js",
+    "main.js.map": "/react-wizard-builder/static/js/main.03b6c0d8.chunk.js.map",
     "runtime-main.js": "/react-wizard-builder/static/js/runtime-main.f4410440.js",
     "runtime-main.js.map": "/react-wizard-builder/static/js/runtime-main.f4410440.js.map",
     "static/js/2.727106e0.chunk.js": "/react-wizard-builder/static/js/2.727106e0.chunk.js",
     "static/js/2.727106e0.chunk.js.map": "/react-wizard-builder/static/js/2.727106e0.chunk.js.map",
     "index.html": "/react-wizard-builder/index.html",
-    "precache-manifest.e986abee2fdce12c1c91e1af16b3c234.js": "/react-wizard-builder/precache-manifest.e986abee2fdce12c1c91e1af16b3c234.js",
+    "precache-manifest.da39a0c65d9247cc5dd00c63a1d5065b.js": "/react-wizard-builder/precache-manifest.da39a0c65d9247cc5dd00c63a1d5065b.js",
     "service-worker.js": "/react-wizard-builder/service-worker.js",
     "static/css/main.0fe1c3f2.chunk.css.map": "/react-wizard-builder/static/css/main.0fe1c3f2.chunk.css.map",
     "static/js/2.727106e0.chunk.js.LICENSE.txt": "/react-wizard-builder/static/js/2.727106e0.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f4410440.js",
     "static/js/2.727106e0.chunk.js",
     "static/css/main.0fe1c3f2.chunk.css",
-    "static/js/main.5fcda72b.chunk.js"
+    "static/js/main.03b6c0d8.chunk.js"
   ]
 }
