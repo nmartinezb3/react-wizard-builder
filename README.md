@@ -42,7 +42,7 @@ const App = () => (
 
 ## API 📚️
 
-## `WizardFramework`
+### `WizardFramework`
 
 All render props receives the `WizardFramework` object as a parameter, wich has a set of utilities to handle the wizard:
 | Prop | Type | Description
@@ -55,9 +55,9 @@ All render props receives the `WizardFramework` object as a parameter, wich has 
 | lastStep | `Boolean`| Boolean which specifies if the current step is the last one.
 | firstStep | `Boolean`| Boolean which specifies if the current step is the first one.
 
-## `<Wizard>`
+### `<Wizard>`
 
-### Props
+#### Props
 
 | Prop                       |    Type    | Required | Description                                                                                                       |
 | -------------------------- | :--------: | :------: | ----------------------------------------------------------------------------------------------------------------- |
@@ -78,9 +78,9 @@ All render props receives the `WizardFramework` object as a parameter, wich has 
 | statusBarClassName         |  `String`  | `False`  | CSS class name to override default status bar styles.                                                             |
 | statusBarProgressClassName |  `String`  | `False`  | CSS class name to override default status bar progress styles.                                                    |
 
-## `<Wizard.Step>`
+### `<Wizard.Step>`
 
-### Props
+#### Props
 
 | Prop   |    Type    | Required | Description                                                                      |
 | ------ | :--------: | :------: | -------------------------------------------------------------------------------- |
@@ -89,8 +89,9 @@ All render props receives the `WizardFramework` object as a parameter, wich has 
 ## Examples 📘
 
 Check sample code [here](https://github.com/nmartinezb3/react-wizard-builder/tree/master/example)
-Live preview [here](https://github.com/nmartinezb3/react-wizard-builder/tree/master/example)
 
-## License ✍️
+Live preview [here](https://nmartinezb3.github.io/react-wizard-builder/)
 
-MIT © [nmartinezb3](https://github.com/nmartinezb3)
+## Author ✍️
+Nicolás Martínez - [nmartinezb3](https://github.com/nmartinezb3)
+
