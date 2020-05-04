@@ -14,6 +14,7 @@ const App = () => {
           initialStep={0}
           renderHeader={(props) => <Header {...props} />}
           onNextStep={({ currentStep }) => console.log('On next step ' + currentStep)}
+          onPreviousStep={({ currentStep }) => console.log('On previous step ' + currentStep)}
           onFinish={() => console.log('Wizard finished!')}
         >
           <Wizard.Step

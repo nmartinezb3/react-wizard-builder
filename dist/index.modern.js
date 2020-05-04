@@ -169,7 +169,7 @@ function Wizard(props) {
   } = props;
   return React.createElement(WizardContainer, {
     className: props.className
-  }, renderStatusBar(), React.createElement("div", null, renderHeader(getToolset())), React.createElement(StepContainer, null, React.cloneElement(children[currentStep], getToolset())), renderFooter());
+  }, renderStatusBar(), renderHeader(getToolset()), React.createElement(StepContainer, null, React.cloneElement(children[currentStep], getToolset())), renderFooter());
 }
 Wizard.StatusBar = StatusBar;
 Wizard.Footer = Footer;

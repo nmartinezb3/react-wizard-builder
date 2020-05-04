@@ -117,7 +117,7 @@ export function Wizard(props: WizardProps) {
   return (
     <WizardContainer className={props.className}>
       {renderStatusBar()}
-      <div>{renderHeader(getToolset())}</div>
+      {renderHeader(getToolset())}
       <StepContainer>{React.cloneElement(children[currentStep], getToolset())}</StepContainer>
       {renderFooter()}
     </WizardContainer>

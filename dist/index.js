@@ -222,7 +222,7 @@ function Wizard(props) {
       children = props.children;
   return React__default.createElement(WizardContainer, {
     className: props.className
-  }, renderStatusBar(), React__default.createElement("div", null, renderHeader(getToolset())), React__default.createElement(StepContainer, null, React__default.cloneElement(children[currentStep], getToolset())), renderFooter());
+  }, renderStatusBar(), renderHeader(getToolset()), React__default.createElement(StepContainer, null, React__default.cloneElement(children[currentStep], getToolset())), renderFooter());
 }
 Wizard.StatusBar = StatusBar;
 Wizard.Footer = Footer;
