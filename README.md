@@ -4,6 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-wizard-builder.svg)](https://www.npmjs.com/package/react-wizard-builder)
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
+
 ![gif](example/sample.gif)
 
 ## Install 💻
