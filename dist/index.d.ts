@@ -1,1 +1,1 @@
-export { WizardProps, Wizard } from './components/Wizard';
+export { WizardFramework, Wizard } from './components/Wizard';

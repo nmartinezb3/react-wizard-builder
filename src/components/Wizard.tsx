@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { StatusBarProps, StatusBar } from './StatusBar'
-import { Footer, FooterProps } from './Footer'
+import { StatusBar } from './StatusBar'
+import { Footer } from './Footer'
 import { WizardContainer, StepContainer } from './Wizard.styles'
 
-export interface WizardProps {
+export interface WizardFramework {
   currentStep: number
   countSteps: number
   next: () => any
@@ -12,29 +12,33 @@ export interface WizardProps {
   lastStep: boolean
   firstStep: boolean
 }
-export interface WizardRenderProps extends WizardProps {
-  render: (props: WizardProps) => React.ReactChild
+export interface WizardRenderProps extends WizardFramework {
+  render: (props: WizardFramework) => React.ReactChild
 }
 
-interface IWizardProps {
-  renderHeader: (props: WizardProps) => React.ReactNode
-  renderStatusBar: (props: WizardProps) => React.ReactNode
+interface WizardProps {
+  renderHeader: (props: WizardFramework) => React.ReactNode
+  renderStatusBar: (props: WizardFramework) => React.ReactNode
   hideStatusBar: boolean
-  renderFooter: (props: WizardProps) => React.ReactNode
+  renderFooter: (props: WizardFramework) => React.ReactNode
   hideFooter: boolean
-  onNextStep: (params: WizardProps) => any
-  onPreviousStep: (params: WizardProps) => any
-  onFinish: (params: WizardProps) => any
+  onNextStep: (params: WizardFramework) => any
+  onPreviousStep: (params: WizardFramework) => any
+  onFinish: (params: WizardFramework) => any
   children: React.ReactChild
   initialStep?: number
   previousStepLabel?: string
   nextStepLabel?: string
   finishStepLabel?: string
+  className?: string
+  footerClassName?: string
+  statusBarClassName?: string
+  statusBarProgressClassName?: string
 }
 
-export function Wizard(props: IWizardProps) {
+export function Wizard(props: WizardProps) {
   const [currentStep, setCurrentStep] = useState(props.initialStep || 0)
-  const getPropsBag = () => ({
+  const getToolset = (): WizardFramework => ({
     currentStep,
     countSteps: React.Children.count(props.children),
     next: next,
@@ -56,10 +60,10 @@ export function Wizard(props: IWizardProps) {
 
   const next = () => {
     if (isLastStep()) {
-      props.onFinish(getPropsBag())
+      props.onFinish(getToolset())
     } else {
       if (props.onNextStep) {
-        props.onNextStep(getPropsBag())
+        props.onNextStep(getToolset())
       }
       setCurrentStep((prevStep) => prevStep + 1)
     }
@@ -68,7 +72,7 @@ export function Wizard(props: IWizardProps) {
   const previous = () => {
     if (!isFirstStep()) {
       if (props.onPreviousStep) {
-        props.onPreviousStep(getPropsBag())
+        props.onPreviousStep(getToolset())
       }
       setCurrentStep((prevStep) => prevStep - 1)
     }
@@ -79,9 +83,16 @@ export function Wizard(props: IWizardProps) {
       return null
     }
     if (props.renderStatusBar) {
-      return props.renderStatusBar(getPropsBag())
+      return props.renderStatusBar(getToolset())
     }
-    return <Wizard.StatusBar currentStep={currentStep} countSteps={React.Children.count(props.children)} />
+    return (
+      <Wizard.StatusBar
+        statusBarClassName={props.statusBarClassName}
+        statusBarProgressClassName={props.statusBarProgressClassName}
+        currentStep={currentStep}
+        countSteps={React.Children.count(props.children)}
+      />
+    )
   }
 
   const renderFooter = () => {
@@ -89,11 +100,12 @@ export function Wizard(props: IWizardProps) {
       return null
     }
     if (props.renderFooter) {
-      return props.renderFooter(getPropsBag())
+      return props.renderFooter(getToolset())
     }
     return (
       <Wizard.Footer
-        {...getPropsBag()}
+        className={props.footerClassName}
+        {...getToolset()}
         previousStepLabel={props.previousStepLabel}
         nextStepLabel={props.nextStepLabel}
         finishStepLabel={props.finishStepLabel}
@@ -103,16 +115,15 @@ export function Wizard(props: IWizardProps) {
 
   const { renderHeader, children } = props
   return (
-    <WizardContainer>
+    <WizardContainer className={props.className}>
       {renderStatusBar()}
-      <div>{renderHeader(getPropsBag())}</div>
-      <StepContainer>{React.cloneElement(children[currentStep], getPropsBag())}</StepContainer>
+      <div>{renderHeader(getToolset())}</div>
+      <StepContainer>{React.cloneElement(children[currentStep], getToolset())}</StepContainer>
       {renderFooter()}
     </WizardContainer>
   )
 }
 
-Wizard.StatusBar = (props: StatusBarProps) => <StatusBar {...props} />
-Wizard.Footer = (props: FooterProps) => <Footer {...props} />
-
+Wizard.StatusBar = StatusBar
+Wizard.Footer = Footer
 Wizard.Step = ({ render, ...props }: WizardRenderProps) => (render ? render(props) : null)

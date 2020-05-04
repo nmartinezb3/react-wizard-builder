@@ -1,8 +1,9 @@
 /// <reference types="react" />
-import { WizardProps } from '..';
-export interface FooterProps extends WizardProps {
+import { WizardFramework } from './Wizard';
+export interface FooterProps extends WizardFramework {
     previousStepLabel?: string;
     nextStepLabel?: string;
     finishStepLabel?: string;
+    className?: string;
 }
 export declare function Footer(props: FooterProps): JSX.Element;

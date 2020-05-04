@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { WizardProps } from 'react-wizard'
+import { WizardFramework } from '../../src/components/Wizard'
 
 export const Text = styled.div`
   font-weight: bold;
@@ -15,9 +15,7 @@ export const Subtitle = styled.div`
   padding: 20px 0;
 `
 
-interface IHeaderProps extends WizardProps {}
-
-const Header = (props: IHeaderProps) => {
+const Header = (props: WizardFramework) => {
   return (
     <Fragment>
       <Text>Welcome to the wizard!</Text>

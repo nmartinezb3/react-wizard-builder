@@ -24,9 +24,24 @@ code {
   margin-top: 14px;
   padding: 17px 20px;
   margin-bottom: 20px;
-  /* position: ${props => props.position || 'static'}; */
 
   margin-top: 15px;
   margin-bottom: 15px;
   height: 400px;
+}
+
+.my-wizard {
+  background-color: red;
+  flex-direction: row;
+}
+.my-footer {
+  background-color: blue;
+  padding: 20px;
+}
+.my-status-bar {
+  margin: 20px;
+}
+.my-progress.my-progress {
+  background-color: blue;
+  height: 10px;
 }

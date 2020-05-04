@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { WizardProps } from '..'
+import { WizardFramework } from './Wizard'
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -36,15 +36,16 @@ const Button = styled.button`
     `};
 `
 
-export interface FooterProps extends WizardProps {
+export interface FooterProps extends WizardFramework {
   previousStepLabel?: string
   nextStepLabel?: string
   finishStepLabel?: string
+  className?: string
 }
 
 export function Footer(props: FooterProps) {
   return (
-    <ButtonContainer>
+    <ButtonContainer className={props.className}>
       <Button onClick={props.previous} disabled={props.firstStep}>
         {props.previousStepLabel || 'Previous'}
       </Button>

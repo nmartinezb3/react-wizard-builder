@@ -7,6 +7,10 @@ const App = () => {
     <div className='app-container'>
       <div className='white-card'>
         <Wizard
+          className='my-wizard'
+          footerClassName='my-footer'
+          statusBarClassName='my-status-bar'
+          statusBarProgressClassName='my-progress'
           initialStep={0}
           renderHeader={(props) => <Header {...props} />}
           onNextStep={({ currentStep }) => console.log('On next step ' + currentStep)}

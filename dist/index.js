@@ -30,7 +30,7 @@ function _taggedTemplateLiteralLoose(strings, raw) {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  height: 6px;\n  background-color: #4ca1ff;\n  transition: width 0.2s;\n  width: ", "%;\n  border-radius: 10px;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  margin-bottom: 15px;\n  background-color: #efeef5;\n  border-radius: 10px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -40,7 +40,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  margin-bottom: 15px;\n  background-color: #efeef5;\n  border-radius: 10px;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  height: 6px;\n  background-color: #4ca1ff;\n  transition: width 0.2s;\n  width: ", "%;\n  border-radius: 10px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -48,12 +48,15 @@ function _templateObject() {
 
   return data;
 }
-var StatusBarContainer = styled__default.div(_templateObject());
-var StatusBarProgress = styled__default.div(_templateObject2(), function (props) {
+var StatusBarProgress = styled__default.div(_templateObject(), function (props) {
   return 100 / props.countSteps * (props.currentStep + 1);
 });
+var StatusBarContainer = styled__default.div(_templateObject2());
 var StatusBar = function StatusBar(props) {
-  return React__default.createElement(StatusBarContainer, null, React__default.createElement(StatusBarProgress, {
+  return React__default.createElement(StatusBarContainer, {
+    className: props.statusBarClassName
+  }, React__default.createElement(StatusBarProgress, {
+    className: props.statusBarProgressClassName,
     countSteps: props.countSteps,
     currentStep: props.currentStep
   }));
@@ -93,7 +96,9 @@ var Button = styled__default.button(_templateObject2$1(), function (props) {
   return props.disabled && styled.css(_templateObject3());
 });
 function Footer(props) {
-  return React__default.createElement(ButtonContainer, null, React__default.createElement(Button, {
+  return React__default.createElement(ButtonContainer, {
+    className: props.className
+  }, React__default.createElement(Button, {
     onClick: props.previous,
     disabled: props.firstStep
   }, props.previousStepLabel || 'Previous'), React__default.createElement(Button, {
@@ -128,7 +133,7 @@ function Wizard(props) {
       currentStep = _useState[0],
       setCurrentStep = _useState[1];
 
-  var getPropsBag = function getPropsBag() {
+  var getToolset = function getToolset() {
     return {
       currentStep: currentStep,
       countSteps: React__default.Children.count(props.children),
@@ -154,10 +159,10 @@ function Wizard(props) {
 
   var next = function next() {
     if (isLastStep()) {
-      props.onFinish(getPropsBag());
+      props.onFinish(getToolset());
     } else {
       if (props.onNextStep) {
-        props.onNextStep(getPropsBag());
+        props.onNextStep(getToolset());
       }
 
       setCurrentStep(function (prevStep) {
@@ -169,7 +174,7 @@ function Wizard(props) {
   var previous = function previous() {
     if (!isFirstStep()) {
       if (props.onPreviousStep) {
-        props.onPreviousStep(getPropsBag());
+        props.onPreviousStep(getToolset());
       }
 
       setCurrentStep(function (prevStep) {
@@ -184,10 +189,12 @@ function Wizard(props) {
     }
 
     if (props.renderStatusBar) {
-      return props.renderStatusBar(getPropsBag());
+      return props.renderStatusBar(getToolset());
     }
 
     return React__default.createElement(Wizard.StatusBar, {
+      statusBarClassName: props.statusBarClassName,
+      statusBarProgressClassName: props.statusBarProgressClassName,
       currentStep: currentStep,
       countSteps: React__default.Children.count(props.children)
     });
@@ -199,10 +206,12 @@ function Wizard(props) {
     }
 
     if (props.renderFooter) {
-      return props.renderFooter(getPropsBag());
+      return props.renderFooter(getToolset());
     }
 
-    return React__default.createElement(Wizard.Footer, Object.assign({}, getPropsBag(), {
+    return React__default.createElement(Wizard.Footer, Object.assign({
+      className: props.footerClassName
+    }, getToolset(), {
       previousStepLabel: props.previousStepLabel,
       nextStepLabel: props.nextStepLabel,
       finishStepLabel: props.finishStepLabel
@@ -211,16 +220,12 @@ function Wizard(props) {
 
   var renderHeader = props.renderHeader,
       children = props.children;
-  return React__default.createElement(WizardContainer, null, renderStatusBar(), React__default.createElement("div", null, renderHeader(getPropsBag())), React__default.createElement(StepContainer, null, React__default.cloneElement(children[currentStep], getPropsBag())), renderFooter());
+  return React__default.createElement(WizardContainer, {
+    className: props.className
+  }, renderStatusBar(), React__default.createElement("div", null, renderHeader(getToolset())), React__default.createElement(StepContainer, null, React__default.cloneElement(children[currentStep], getToolset())), renderFooter());
 }
-
-Wizard.StatusBar = function (props) {
-  return React__default.createElement(StatusBar, Object.assign({}, props));
-};
-
-Wizard.Footer = function (props) {
-  return React__default.createElement(Footer, Object.assign({}, props));
-};
+Wizard.StatusBar = StatusBar;
+Wizard.Footer = Footer;
 
 Wizard.Step = function (_ref) {
   var render = _ref.render,
