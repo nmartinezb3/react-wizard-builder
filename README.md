@@ -66,9 +66,9 @@ All render props receives the `WizardFramework` object as a parameter, wich has 
 | hideStatusBar              | `Boolean`  | `False`  | Hides the status bar. Defaults to `False`.                                                                        |
 | renderFooter               | `Function` | `False`  | Function to render a custom footer. Receives `WizardFramework` object as param and returns a React component.     |
 | hideFooter                 | `Boolean`  |  `True`  | Hides the footer. Defaults to `False`.                                                                            |
-| onNextStep                 | `Function` |  `True`  | Callback when the wizard will go to next step.                                                                    |
-| onPreviousStep             | `Function` |  `True`  | Callback when the wizard will go to previous step.                                                                |
-| onFinish                   | `Function` |  `True`  | Callback when the wizard will finish.                                                                             |
+| onNextStep                 | `Function` |  `False`  | Callback when the wizard goes to next step.                                                                    |
+| onPreviousStep             | `Function` |  `False`  | Callback when the wizard goes to previous step.                                                                |
+| onFinish                   | `Function` |  `False`  | Callback when the wizard will finish.                                                                             |
 | initialStep                |  `Number`  | `False`  | Defaults to `0`.                                                                                                  |
 | previousStepLabel          |  `String`  | `False`  | Label to show on previous step button. Defaults to 'Previous'.                                                    |
 | nextStepLabel              |  `String`  | `False`  | Label to show on next step button. Defaults to 'Next'.                                                            |
